@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import fs from 'fs'
 
 const app = express();
-const port = 3000;
+const port =  https://gvijay370.github.io/CreateBlog;
 
 var dic = {};
 //dic['name'] = ['the', 'kdi'];
