@@ -1,0 +1,23 @@
+<%- include('header.ejs')%>
+
+
+<main class="flex-shrink-0">
+    <div class="container">
+      <h1 class="mt-5">Create Your Blog</h1>
+      <form action="/blog", method="post">
+        <Label>Author Name</Label><br>
+        <input type="text" id="author" name="author"  <%if(locals.author){%>value='<%= author %>'<%}%>><br><br>
+        <Label for="title">Enter The Title</Label><br>
+        <input type="text" id="title" name="title" size="70" <%if(locals.title){%>value='<%= title %>'<%}%>><br><br>
+        <Label for="title">Enter The content</Label><br>
+        <textarea name="paragraph_text" cols="72" rows="10"><%if(locals.body){%><%= body%><%}%></textarea><br><br>
+        <input type="submit" name="Submit" class="btn btn-dark">
+    </form>
+    </div>
+</main>
+    
+
+
+
+
+<%- include('footer.ejs')%>

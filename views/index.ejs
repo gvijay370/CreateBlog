@@ -1,0 +1,26 @@
+<%- include('header.ejs')%>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Welcome to VBLOG</h1>
+    <p class="lead mb-5">A place for all types of your blog.</p>
+    
+    <% for(name in  data) {%>
+    <h3 class="mt-5" ><%= name %>'s Blogs</h3>
+    <ul>
+      <% for(i=0;i<data[name].length;i++){%>
+    <form id="form"  action="/open" method="post">
+      <li><input type="submit" value="<%= data[name][i]%>" name="<%= data[name][i]%>"  class="btn btn-light"></li>
+    </form>
+    <%}%>
+  </ul>
+  <%}%>
+    <form action="/new">
+        <input type="submit" value="Create Blog" class="btn btn-dark" />
+    </form>
+  </div>
+</main>
+
+<%- include('footer.ejs')%>
+
